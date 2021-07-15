@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h1>Бургер-конструктор</h1>
+        <h2>Выберать размер:</h2>
+        <input type="radio" name="size" data-price="100" data-calories="40">
+        <span>Большой (100 рублей, 40 калорий)</span><br>
+        <input type="radio" name="size" data-price="50" data-calories="20">
+        <span>Малый (50 рублей, 20 калорий)</span>
+        <h2>Выбрать начинку:</h2>
+        <input type="radio" name="stuffing" data-price="10" data-calories="20">
+        <span>Сыр (10 рублей, 20 калорий)</span><br>
+        <input type="radio" name="stuffing" data-price="20" data-calories="5">
+        <span>Салат (20 рублей, 5 калорий)</span><br>
+        <input type="radio" name="stuffing" data-price="15" data-calories="10">
+        <span>Картофель (15 рублей, 10 калорий)</span><br>
+        <h2>Добавить:</h2>
+        <input type="checkbox" name="topping" data-price="15" data-calories="0">
+        <span>Приправу (15 рублей, 0 калорий)</span><br>
+        <input type="checkbox" name="topping" data-price="20" data-calories="5">
+        <span>Майонез (20 рублей, 5 калорий)</span><br><br>
+        <button id="check" type="button">Посчитать стоимость</button>
+        <h3>Цена бургера: <span id="price">0</span><br> Итого калорий в бургере: <span id="calories">0</span>
+        </h3>
+    </form>
+    <script src="hamburgers.js"></script>
+</body>
+
+</html>
