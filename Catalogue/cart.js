@@ -1,4 +1,5 @@
 'use strict';
+
 const openBasketBtn = document.querySelector('.cart__iconWrap');
 const basketCounterEl = document.querySelector('.cart__iconWrap span');
 const basketEl = document.querySelector('.basket');
