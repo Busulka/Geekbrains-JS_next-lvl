@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2436301015.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="container navigation">
+            <nav class="left">
+                <a href="index.html" class="left__logo"> <img src="img/logo.svg" alt="logo">
+                </a>
+                <a href="#" class="left__search"> <img src="img/search.svg" alt="search">
+                </a>
+            </nav>
+            <nav class="right">
+                <div class="right__burger"> <img src="img/burger.svg" alt="menu">
+                </div>
+                <aside class="burger__side">
+                    <div class="burger__bar">
+                        <img class="burger__bar-close cross" src="img/cross.svg" alt="close">
+                        <div class="burger__bar-menu">
+                            <p class="burger__bar-menu-header">MENU</p>
+                            <h4 class="menu-list-header">MAN</h4>
+                            <ul class="menu-list">
+                                <li class="menu-list__item"><a class="menu-list__link" href="#">Accessories</a></li>
+                                <li class="menu-list__item"><a class="menu-list__link" href="#">Bags</a></li>
+                                <li class="menu-list__item"><a class="menu-list__link" href="#">Denim</a></li>
+                                <li class="menu-list__item"><a class="menu-list__link" href="#">T-Shirts</a></li>
+                            </ul>
+                            <h4 class="menu-list-header">WOMAN</h4>
+                            <ul class="menu-list">
+                                <li class="menu-list__item"><a class="menu-list__link" href="#">Accessories</a></li>
+                                <li class="menu-list__item"><a class="menu-list__link" href="#">Jackets & Coats</a></li>
+                                <li class="menu-list__item"><a class="menu-list__link" href="#">Polos</a></li>
+                                <li class="menu-list__item"><a class="menu-list__link" href="#">T-Shirts</a></li>
+                                <li class="menu-list__item"><a class="menu-list__link" href="#">Shirts</a></li>
+                            </ul>
+                            <h4 class="menu-list-header">KIDS</h4>
+                            <ul class="menu-list">
+                                <li class="menu-list__item"><a class="menu-list__link" href="#">Accessories</a></li>
+                                <li class="menu-list__item"><a class="menu-list__link" href="#">Jackets & Coats</a></li>
+                                <li class="menu-list__item"><a class="menu-list__link" href="#">Polos</a></li>
+                                <li class="menu-list__item"><a class="menu-list__link" href="#">T-Shirts</a></li>
+                                <li class="menu-list__item"><a class="menu-list__link" href="#">Shirts</a></li>
+                                <li class="menu-list__item"><a class="menu-list__link" href="#">Bags</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+                <a href="registration.html" class="right__person"> <img src="img/person.svg" alt="person">
+                </a>
+                <span class="cart__iconWrap right__cart">
+                    <img src="img/cart.svg" alt="cart">
+                    <span>0</span>
+                </span>
+                <div class="basket hidden">
+                    <div class="basketRow basketHeader">
+                        <div>Название товара</div>
+                        <div>Количество</div>
+                        <div>Цена за шт.</div>
+                        <div>Итого</div>
+                    </div>
+                    <div class="basketTotal">
+                        Товаров в корзине на сумму:
+                        $<span class="basketTotalValue">0</span>
+                    </div>
+                </div>
+            </nav>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="main__top">
+            <div class="container main__top">
+                <h2 class="main__heading">NEW ARRIVALS</h2>
+                <nav class=site-nav>
+                    <a href="#" class="site-nav__menu">HOME</a>
+                    <span>/</span>
+                    <a href="#" class="site-nav__menu">MEN</a>
+                    <span>/</span>
+                    <a href="#" class="site-nav__new-arrivals site-nav__menu">NEW ARRIVALS</a>
+                </nav>
+            </div>
+        </div>
+        <div class="catalog-menu container">
+            <div class="catalog-menu__filter">
+                <p class="filter-heading">FILTER</p>
+                <svg class="filter__icon" width="15" height="10" viewBox="0 0 15 10" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="filter__icon"
+                        d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z"
+                        fill="black" />
+                </svg>
+            </div>
+            <div class="filter__bar">
+                <h4 class="filter-list">CATEGORY</h4>
+                <svg width="328" height="1" viewBox="0 0 328 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 0.5H327.5H0.5Z" stroke="#EBEBEB" stroke-linejoin="round" />
+                </svg>
+                <li class="filter-list__item"><a class="menu-list__link" href="#">Accessories</a>
+                </li>
+                <li class="filter-list__item"><a class="menu-list__link" href="#">Bags</a></li>
+                <li class="filter-list__item"><a class="menu-list__link" href="#">Denim</a></li>
+                <li class="filter-list__item"><a class="menu-list__link" href="#">Hoodies &
+                        Sweatshirts</a></li>
+                <li class="filter-list__item"><a class="menu-list__link" href="#">Jackets &
+                        Coats</a></li>
+                <li class="filter-list__item"><a class="menu-list__link" href="#">Polos</a></li>
+                <li class="filter-list__item"><a class="menu-list__link" href="#">Shirts</a></li>
+                <li class="filter-list__item"><a class="menu-list__link" href="#">Shoes</a></li>
+                <li class="filter-list__item"><a class="menu-list__link" href="#">Sweaters &
+                        Knits</a></li>
+                <li class="filter-list__item"><a class="menu-list__link" href="#">T-Shirts</a>
+                </li>
+                <li class="filter-list__item"><a class="menu-list__link" href="#">Tanks</a></li>
+
+                <h4 class="filter-list">BRAND
+                </h4>
+                <svg width="328" height="1" viewBox="0 0 328 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 0.5H327.5H0.5Z" stroke="#EBEBEB" stroke-linejoin="round" />
+                </svg>
+                <h4 class="filter-list">DESIGNER
+                </h4>
+                <svg width="328" height="1" viewBox="0 0 328 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 0.5H327.5H0.5Z" stroke="#EBEBEB" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="catalog-menu__options">
+                <div class="catalog-menu__heading catalog-menu__heading-options">
+                    <p class="catalog-menu__heading">TRENDING NOW</p>
+                    <div class="options__trending options">
+                        <label for="check" class="option"><input type="checkbox" id="check" name="Men"
+                                value="a1">Men</input></label><br>
+                        <label for="check-1" class="option"><input type="checkbox" id="check-1" name="Women"
+                                value="a1">Women</input></label><br>
+                        <label for="check-2" class="option"><input type="checkbox" id="check-2" name="Unisex"
+                                value="a1">Unisex</input></label><br>
+                        <label for="check-3" class="option"><input type="checkbox" id="check-3" name="Kids"
+                                value="a1">Kids</input></label>
+                    </div>
+                    <img src="img/menu_arrow.svg" alt="arrow" class="menu-arrow">
+                </div>
+                <div class="catalog-menu__heading catalog-menu__heading-options">
+                    <p class="catalog-menu__heading">SIZE</p>
+                    <div class="options__size options">
+                        <label for="check-4" class="option"><input type="checkbox" id="check-4" name="XS"
+                                value="a1">XS</input></label>
+                        <label for="check-5" class="option"><input type="checkbox" id="check-5" name="S"
+                                value="a1">S</input></label>
+                        <label for="check-6" class="option"><input type="checkbox" id="check-6" name="M"
+                                value="a1">M</input></label>
+                        <label for="check-7" class="option"><input type="checkbox" id="check-7" name="L"
+                                value="a1">L</input></label>
+                    </div>
+                    <img src="img/menu_arrow.svg" alt="arrow" class="menu-arrow">
+                </div>
+                <div class="catalog-menu__heading catalog-menu__heading-options">
+                    <p class="catalog-menu__heading">PRICE</p>
+                    <div class="options__price options">
+                        <label for="check-8" class="option"><input type="checkbox" id="check-8" name="$50-100"
+                                value="a1">$50-100</input></label>
+                        <label for="check-9" class="option"><input type="checkbox" id="check-9" name="$150-200"
+                                value="a1">$150-200</input></label>
+                        <label for="check-10" class="option"><input type="checkbox" id="check-10" name="$200-250"
+                                value="a1">$150-200</input></label>
+                        <label for="check-11" class="option"><input type="checkbox" id="check-11" name="$250+"
+                                value="a1">$250+</input></label>
+                    </div>
+                    <img src="img/menu_arrow.svg" alt="arrow" class="menu-arrow">
+                </div>
+            </div>
+        </div>
+        <div class="catalog__products container">
+
+        </div>
+        <div class="pagination">
+            <a class="pagination__pages" href="#"><img src="img/left_arrow.svg" alt="left-arrow"></a>
+            <a class="pagination__pages" href="#">1</a>
+            <a class="pagination__pages" href="#">2</a>
+            <a class="pagination__pages" href="#">3</a>
+            <a class="pagination__pages" href="#">4</a>
+            <a class="pagination__pages" href="#">5</a>
+            <a class="pagination__pages" href="#">6</a>
+            <a class="pagination__pages" href="#">...</a>
+            <a class="pagination__pages" href="#">20</a>
+            <a class="pagination__pages" href="#"><img src="img/right-arrow.svg" alt="right-arrow"></a>
+        </div>
+        <div class="service">
+            <div class="container service__cards">
+                <div class="service__card">
+                    <div class="service__delivery">
+                        <div class="service__delivery-logo"><img src="img/delivery.svg" alt="delivery">
+                        </div>
+                        <h5 class="service__name">Delivery</h5>
+                        <p class="service__text">Worldwide delivery on all. Authorit tively morph next-generation
+                            innov
+                            tion with extensive models.</p>
+                    </div>
+                </div>
+                <div class="service__card">
+                    <div class="servise__sales">
+                        <div class="service__sales-logo"><img src="img/sales.svg" alt="sales">
+                        </div>
+                        <h5 class="service__name">Sales & discounts</h5>
+                        <p class="service__text">Worldwide delivery on all. Authorit tively morph next-generation
+                            innov
+                            tion with extensive models.</p>
+                    </div>
+                </div>
+                <div class="service__card">
+                    <div class="service__quality">
+                        <div class="service__quality-logo"><img src="img/quality.svg" alt="">
+                        </div>
+                        <h5 class="service__name">Quality assurance</h5>
+                        <p class="service__text">Worldwide delivery on all. Authorit tively morph next-generation
+                            innov
+                            tion
+                            with extensive models.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subscribe">
+            <div class="subscribe__content container">
+                <div class="subscribe__left">
+                    <img src="img/sub_photo.png" alt="photo" class="sub-photo">
+                    <q class="quote">Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
+                        condimentum</q>
+                </div>
+                <div class="subscribe__right">
+                    <h2 class="subscribe__heading">SUBSCRIBE</h2>
+                    <p class="subscribe__text">FOR OUR NEWLETTER AND PROMOTION</p>
+                    <form class="subscribe__form" action="#">
+                        <input class="sub_input" type="email" placeholder="Enter Your Email">
+                        <input class=" subscribe__button" type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__content container">
+            <p class="footer__left">© 2021 Brand All Rights Reserved.</p>
+            <div class="footer__right">
+                <a href="#" class="footer__right-facebook icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="footer__right-instagram icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="footer__right-pinterest icon"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#" class="footer__right-twitter icon"><i class="fab fa-twitter"></i></a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="goods.js"></script>
+    <script src="cart.js"></script>
+</body>
+
+</html>
