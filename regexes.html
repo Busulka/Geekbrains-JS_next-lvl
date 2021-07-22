@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="text">'No I can't,' said Atticus. 'I have to make a living. Besides, they'd put me in jail if I kept you
+        at home-dose of magnesia for you tonight and school tomorrow.'
+        'I'm feeling all right, really.'
+        'Thought so. Now what's the matter?' Bit by bit, I told him the day's misfortunes. '-and she said you taught me
+        all wrong, so we can't ever read any more, ever. Please don't send me back, please sir.'
+        Atticus stood up and walked to the end of the porch. When he completed his examination of the wisteria vine he
+        strolled back to me.
+        'First of all,' he said, 'if you can learn a simple trick, Scout, you'll get along a lot better with all kinds
+        of folks. You never really understand a person until you consider things from his point of view-'
+        'Sir?'
+
+    </p>
+    <button id="btn"> Заменить на ковычки</button>
+    <script>
+        'use strict';
+        let text = document.querySelector(".text");
         document.getElementById('btn').addEventListener('click', () => {
             text.textContent = text.textContent.replace(/\B'|'\B/g, '"');
         });
