@@ -18,13 +18,18 @@ header {
 }
 
 .container {
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   width: 80%;
   margin: 0 auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cart-btn {
@@ -36,6 +41,7 @@ header {
   font-size: 24px;
   border-radius: 5px;
   margin-left: 5vh;
+  cursor: pointer;
 }
 
 .items-list {
@@ -79,5 +85,26 @@ header {
   padding: 10px;
   color: white;
   border-radius: 15px;
+  cursor: pointer;
+}
+
+.cart-box {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.62);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.62);
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  color: black;
+  width: 300px;
+  top: 50px;
+  right: 10px;
+  z-index: 10;
+}
+
+.invisible {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

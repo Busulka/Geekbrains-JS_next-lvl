@@ -1,43 +1,68 @@
-class itemList {
-    constructor(container = '.items-list') {
-        this.container = container
-        this.items = [];
-        this.allItems = [];
-        this._fetchItems();
-        this._render();
+const app = new Vue({
+    el: '#app',
+    data: {
+        userSearch: '',
+        showCart: false,
+        cartUrl: '/getBasket.json',
+        catalogUrl: '/catalog.json',
+        products: [],
+        cartItems: [],
+        filtered: [],
+    },
+    methods: {
+        getJson(url) {
+            return fetch(url)
+                .then(result => result.json())
+                .catch(error => {
+                    console.log(error);
+                })
+        },
+        addProduct(product) {
+            this.getJson(`/addToBasket.json`)
+                .then(data => {
+                    if (data.result === 1) {
+                        let find = this.cartItems.find(el => el.id === product.id);
+                        if (find) {
+                            find.quantity++;
+                        } else {
+                            let prod = Object.assign({ quantity: 1 }, product);
+                            this.cartItems.push(prod)
+                        }
+                    } else {
+                        alert('Error');
+                    }
+                })
+        },
+        remove(item) {
+            this.getJson(`/deleteFromBasket.json`)
+                .then(data => {
+                    if (data.result === 1) {
+                        if (item.quantity > 1) {
+                            item.quantity--;
+                        } else {
+                            this.cartItems.splice(this.cartItems.indexOf(item), 1)
+                        }
+                    }
+                })
+        },
+        filter() {
+            let regexp = new RegExp(this.userSearch, 'i');
+            this.filtered = this.products.filter(el => regexp.test(el.title));
+        },
+    },
+    mounted() {
+        this.getJson(`${this.cartUrl}`)
+            .then(data => {
+                for (let el of data.contents) {
+                    this.cartItems.push(el);
+                    this.filtered.push(el);
+                }
+            });
+        this.getJson(this.catalogUrl)
+            .then(data => {
+                for (let el of data) {
+                    this.products.push(el);
+                }
+            });
     }
-    _fetchItems() {
-        this.items = [
-            { id: 1, title: 'Shirt', price: '150' },
-            { id: 2, title: 'Socks', price: '50' },
-            { id: 3, title: 'Jacket', price: '350' },
-            { id: 4, title: 'Shoes', price: '250' },
-        ]
-    }
-    _render() {
-        const block = document.querySelector(this.container);
-        for (let item of this.items) {
-            const productObject = new ProductItem(item);
-            this.allItems.push(productObject);
-            block.insertAdjacentHTML('beforeend', productObject.render())
-        }
-    }
-}
-
-class ProductItem {
-    constructor(item) {
-        this.id = item.id;
-        this.title = item.title;
-        this.price = item.price;
-    }
-    render() {
-        return `
-        <div class = "item">
-            <h3>${this.title}</h3>
-            <p>$${this.price}</p>
-            <button class = "add-btn">Добавить</button>
-        </div>`;
-    }
-}
-
-const list = new itemList();
+});
