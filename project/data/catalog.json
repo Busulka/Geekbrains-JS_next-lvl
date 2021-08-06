@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Shoes",
+        "price": 20
+    },
+    {
+        "name": "Shirt",
+        "price": 5
+    },
+    {
+        "name": "Hat",
+        "price": 50
+    }
+]
