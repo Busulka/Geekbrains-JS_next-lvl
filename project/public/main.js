@@ -9,7 +9,7 @@ const vue = new Vue({
     methods: {
         addHandler(good) {
             this.cart.push(good);
-            fetch('/cart', {
+            fetch('./cart', {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json"
@@ -18,15 +18,18 @@ const vue = new Vue({
             })
         },
         delHandler(good) {
-            this.cart.splice(this.cart.indexOf(good), 1);
-            fetch('cart', {
-                method: 'DELETE',
-                headers: {
-                    "Content-Type": "text/html charset=utf-8"
-                },
-                body: JSON.stringify(good)
-            })
+            let index = this.cart.indexOf(good);
+            if (index !== -1) {
+                this.cart.splice(index, 1);
+                fetch('./cart', {
+                    method: 'DELETE',
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(good)
+                })
 
+            }
         }
     },
     mounted() {
